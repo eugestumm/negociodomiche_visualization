@@ -1,4 +1,4 @@
-# Leaflet Storymaps with Google Sheets
+# Exploring Néstor Perlongher's "O Negócio do Michê" through digital mapping
 
 ## Introduction
 "The research ""Negócio do michê"" (<i>Negocio del deseo</i> in Spanish) is the result of Néstor Perlongher’s masters dissertation in Anthropology at the Federal University of Campinas (UNICAMP), Brazil. As Brad Epps (ref) underscores, Perlongher’s research is emblematic for offering a groundbreaking approach to think of gender and sexuality. His ethnography in the 1980’s offered new horizons not only to Anthropology of Gender and Sexuality but also to the field later known as Queer Studies. Perlongher's avant-garde approach was remarkable for interviewing gender and sexual dissident sex workers and clients in-locus, visiting the gay ghettos in São Paulo and including his own positionality as a queer man in that urban territory.
