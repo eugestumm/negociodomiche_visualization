@@ -1,56 +1,31 @@
 # Leaflet Storymaps with Google Sheets
-Customize your Leaflet story map with linked Google Sheets template and scrolling narrative.
-Supports images, audio and video embeddings, and Leaflet TileLayer/geojson overlays.
 
-<p align="center">
-  <img src="./leaflet-storymaps-demo.gif" title="Storymaps demo" width="100%" />
-</p>
+## Introduction
+"The research ""Negócio do michê"" (<i>Negocio del deseo</i> in Spanish) is the result of Néstor Perlongher’s masters dissertation in Anthropology at the Federal University of Campinas (UNICAMP), Brazil. As Brad Epps (ref) underscores, Perlongher’s research is emblematic for offering a groundbreaking approach to think of gender and sexuality. His ethnography in the 1980’s offered new horizons not only to Anthropology of Gender and Sexuality but also to the field later known as Queer Studies. Perlongher's avant-garde approach was remarkable for interviewing gender and sexual dissident sex workers and clients in-locus, visiting the gay ghettos in São Paulo and including his own positionality as a queer man in that urban territory.
 
-## Live links (replace with your own)
+The edited version of Perlongher’s master dissertation was originally transformed into a book in Portuguese and later on translated to Spanish. The commercial book editions of his ethnography were reduced in size, omitting details of his original ethnographic trajectory. The details explored in this project are in the vast majority based on the content exclusively found in Perlongher’s original masters dissertation. 
+
+This project aims to address the knowledge gap deepened by this editorial decision. Firstly, by providing the reader with a more immersive approach to Perlongher’s research, enriching the reading of both commercial and original versions of the text; secondly, by utilizing digital mapping techniques not available at the time the research was originally conducted, providing the reader with an interactive experience for visualizing the relationships existent within the urban space. 
+
+The order in which the places are shown in this Digital Map reflect the order in which Perlongher presents them to the reader in his original work. I also kept the written form of the names as stated by Perlongher in his original work (i.e. Donkin Donuts instead of Dunkin Donuts, São Luiz instead of São Luis, etc). 
+
+## About this project
+This project was developed by [Euge Stumm](http://eugestumm.github.io) under the supervision of Professor [Susanna Allés-Torrent](http://susannalles.com/), at the University of Miami. The project was funded by the Digital Humanities Fellowship offered by the University of Miami.
+
+This project relied on free, open-source technologies for developing StoryMaps. We utilized the Leaflet StoryMaps integration developed by Jack Dougherty and Ilya Ilyankou. You can check more of their work, and Leaflet StoryMaps in particular, through the book [Hands-On Data Visualization](https://handsondataviz.org/).
+
+The dataset utilized for this mapping project can be downloaded through [Google Docs](https://docs.google.com/spreadsheets/d/1pK3Z0PkVD8dIouyVeOoy6VFOmH6GHW-4ooEQS68SOds/edit?gid=0#gid=0). The dataset can be used freely by anyone under the license [CC BY-NC-SA](https://creativecommons.org/licenses/by-nc-sa/4.0/).
+
+You can contact me at [ehs89@miami.edu](mailto:ehs89@miami.edu).
+
+## Live links
 - Leaflet Map [https://eugestumm.github.io/negociodomiche_visualization](https://eugestumm.github.io/negociodomiche_visualization)
 - Google Sheets template [https://docs.google.com/spreadsheets/d/1AO6XHL_0JafWZF4KEejkdDNqfuZWUk3SlNlQ6MjlRFM/edit#gid=0](https://docs.google.com/spreadsheets/d/1pK3Z0PkVD8dIouyVeOoy6VFOmH6GHW-4ooEQS68SOds/edit?gid=0#gid=0)
 
-## Create Your Own
-- See step-by-step tutorial in *Hands-On Data Visualization* https://HandsOnDataViz.org/leaflet-storymaps-with-google-sheets.html
-
-#### Geocode your address data with Google Sheets add-on
-To geocode (find latitude and longitude coordinates), we recommend installing the free [Geocoding by SmartMonkey add-on for Google Sheets](https://gsuite.google.com/marketplace/app/geocoding_by_smartmonkey/1033231575312). Insert your addresses in place of the samples in the Geocoding Details tab, then use Add-Ons > Geocoding > Geocode Details menu. Learn more in *Hands-On Data Visualization* https://handsondataviz.org/geocode.html
-
-![Geocoding](geocode.png)
-
-#### To finalize your map, you need to either:
-- Download each Google Sheets tab as a CSV file and upload into a `csv` subfolder in your GitHub repo
-  - OR
-- Get your own Google Sheets API Key to insert into `google-doc-url.js`
-
-See more in the tutorial https://handsondataviz.org/leaflet-storymaps-with-google-sheets.html
-
-## Update your code for any pre-October 2020 storymaps before January 2021
-If you used our code to create a storymap prior to October 2020, you will need to update your version before January 26, 2021 for it to continue to work. Google announced that it will [migrate from Google Sheets API v3 to v4 in Jan 2021](https://developers.google.com/sheets/api/v3), and we released our update of Leaflet storymaps code v1.2 on September 29th to address Google's changes.
-
-Three options to update your code:
-
-Option A: If you understand (or are willing to learn about) [GitHub Desktop](https://handsondataviz.org/github-desktop-atom.html), use it to move copies of the newer code (index.html, scripts folder, markers folder, style.css, etc.) into your repo via your local computer. In the `google-doc-url.js` file, copy and paste the Google Sheets API key that appears in the lower half of our code, but keep your own Google Sheets ID that appears in the upper-half of your code.
-
-OR
-
-Option B: If you originally "forked" a copy of our code, create a GitHub "pull request" to update your repo with our code revisions, including the Google Sheets API key. We recommend this option only if you understand (or are willing to learn about) GitHub pull requests, and can deal with resolving conflicts between your code and our updated code.
-Warning: Since this operation might overwrite some of your code, go to *Code > Download ZIP* to make a backup to your local computer.
-1. Log into the web interface of your GitHub storymap repository.
-2. Click *Pull requests* and click the green button for a *New pull request*.
-3. On the *Comparing Changes* page, use the menus to pull code *into* your repo *from* the original repo, named HandsOnDataViz/leaflet-storymaps-with-google-sheets. GitHub may warn that you cannot automatically merge the files, but proceed anyways.
-4. You may need to click the *Resolve conflicts* button on the next screen, which means you need to sort out which portions of your code to keep and which portions of our code to accept. Generally speaking, you should accept our updates for index.html, style.css, and most scripts.js, while keeping your own content for README.md, media, and geojson folder content. In the google-doc-url.js file, you should keep your own Google Sheet ID, but temporarily add our Google Sheets API key until you create your own. In GitHub, you can resolve code conflicts by deleting/keeping lines in specific files.
-
-OR
-
-Option C: Start over with a brand-new repo, and migrate your existing map content. Make a copy of our newer code by clicking the green 'Use template' button. Migrate any media folder or geodata folder content from your old repo to your new repo, by downloading to your local computer and uploading to GitHub. Reconnect your Google Sheet ID to the `google-doc-url.js` file in your new repo.
-
-Email us at [HandsOnDataViz@gmail.com](handsondataviz@gmail.com) if you need assistance with updating your code.
-
-## Credits (and licenses)
+## Credits (and licenses) regarding the use of Leaflet StoryMaps
 Developed by [Ilya Ilyankou](https://github.com/ilyankou) and [Jack Dougherty](https://github.com/jackdougherty) with support from Connecticut Humanities and Trinity College, CT. Inspired by Code for Atlanta mapsfor.us (2016) https://github.com/codeforatlanta/mapsforus (BSD-3-Clause). Adapted from MUX Lab, Map Effects 100: https://github.com/muxlab/map-effects-100, see http://muxlab.github.io/map-effects-100/Leaflet/11_scroll-driven-map-navigation.html.
 
-We use [Google Sheets API version 4](https://developers.google.com/sheets/api), with these open-source components:
+Leaflet StoryMaps use [Google Sheets API version 4](https://developers.google.com/sheets/api), with these open-source components:
 
 - Leaflet v1.7.1 https://leafletjs.com (BSD-2-Clause)
 - jQuery v3.5.1 https://code.jquery.com (MIT)
